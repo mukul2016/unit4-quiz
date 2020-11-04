@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Quiz</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body>
     <div class="scores"><a href="scores.html">High Score</a></div>
-    <div class="timer"><p>Timer Display</p></div>
-    <div class="quiz-board">
-      <p>Quiz Area</p>
-      <div class="begin-quiz">
-        <h1>Begin Quiz</h1>
-        <p>Begin Quiz by hitting the start button</p>
-        <button class="startQuiz">Start</button>
-      </div>
-      <div class="questions">
-        <p>Your questions will appear here with the choices</p>
-        <div class="choices"> choices</div>
-      </div>
-      <div class="end-quiz"></div>
-      <p>Your score will appear here with the final score</p>
+    <div class="timer">Time: <span id="time">0</span></div>
+    <div class="container">
+        <div id="begin-quiz" class="begin">
+            <h1>Coding Quiz</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <button class="startQuiz">Start Quiz</button>
+        </div>
+        <div id="questions" class="hide">
+            <h2 id=question-title></h2>
+            <div id="choices" class="choices"></div>
+        </div>
+        <div id="end-quiz" class="hide">
+            <h2>Quiz Finished!</h2>
+            <p>Your final score is <span id="final-score"></span>.</p>
+            <p>
+                Enter your initials: <input type="text" id="initials" />
+                <button id="submit">Submit</button>
+            </p>
+        </div>
     </div>
-  </body>
+    <div id="see-your-score" class="SeeYourScore hide"></div>
+</body>
+
+<script src="./assets/js/questions.js"></script>
+<script src="./assets/js/main.js"></script>
+
 </html>
